@@ -16,6 +16,8 @@ State management in every component-based application is hard. TinyState tries t
 
 > Sharing state between components as simple as possible and leverage the good parts of component state and Angular`s dependency injection system.
 
+* Demo on [Stackblitz.io](https://stackblitz.com/edit/tinystate-demo)
+
 ## Installation
 
 ```bash
