@@ -7,4 +7,3 @@ cache:
 script:
   - yarn test
   - yarn build
-  - yarn run lint:commit
