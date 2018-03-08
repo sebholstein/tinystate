@@ -6,7 +6,7 @@
 
 ---
 
-[![npm version](https://badge.fury.io/js/tinystate.svg)](https://www.npmjs.com/package/tinystate) ![Supported Angular versions: 5+](https://img.shields.io/badge/Supported%20Angular%20versions-5+-green.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![npm version](https://badge.fury.io/js/%40tinystate%2Fcore.svg)](https://www.npmjs.com/package/@tinystate/core) ![Supported Angular versions: 5+](https://img.shields.io/badge/Supported%20Angular%20versions-5+-green.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
 
@@ -16,7 +16,9 @@ State management in every component-based application is hard. TinyState tries t
 
 > Sharing state between components as simple as possible and leverage the good parts of component state and Angular`s dependency injection system.
 
-* Demo on [Stackblitz.io](https://stackblitz.com/edit/tinystate-demo)
+## Demo
+
+Demo on [Stackblitz.io](https://stackblitz.com/edit/tinystate-demo)
 
 ## Installation
 
