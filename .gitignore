@@ -1,0 +1,6 @@
+.ng_pkg_build
+.vscode
+.DS_Store
+node_modules
+dist
+coverage
