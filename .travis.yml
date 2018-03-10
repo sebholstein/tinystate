@@ -7,3 +7,5 @@ cache:
 script:
   - yarn test --coverage
   - yarn build
+  - "echo  \"Linting commit message(s). You can find the rules here: https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular#rules\""
+  - ./node_modules/.bin/commitlint-travis
