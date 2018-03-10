@@ -40,5 +40,27 @@ describe('ReduxDevtoolsPluginModule', () => {
       expect(devtoolsInstance.send).toHaveBeenCalledTimes(1);
       expect(devtoolsInstance.send).toHaveBeenCalledWith('NO_NAME', newState);
     });
+
+    it('should not call the devtools api if were running on the server (no window available)', () => {
+      TestBed.resetTestingModule();
+      TestBed.configureTestingModule({
+        imports: [ReduxDevtoolsPluginModule.forRoot()],
+        providers: [{ provide: REDUX_DEVTOOLS_PLUGIN_WINDOW, useValue: null }]
+      });
+      plugin = TestBed.get(ReduxDevtoolsPlugin);
+      plugin.handleNewState({});
+      expect(devtoolsInstance.send).not.toHaveBeenCalled();
+    });
+
+    it('should not call the devtools api if the devtools are not defined on the global window object', () => {
+      TestBed.resetTestingModule();
+      TestBed.configureTestingModule({
+        imports: [ReduxDevtoolsPluginModule.forRoot()],
+        providers: [{ provide: REDUX_DEVTOOLS_PLUGIN_WINDOW, useValue: {} }]
+      });
+      plugin = TestBed.get(ReduxDevtoolsPlugin);
+      plugin.handleNewState({});
+      expect(devtoolsInstance.send).not.toHaveBeenCalled();
+    });
   });
 });
