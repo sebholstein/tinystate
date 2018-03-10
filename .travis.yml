@@ -4,8 +4,12 @@ node_js:
 cache:
   directories:
     - "node_modules"
+before_install:
+  - yarn global add codecov
 script:
   - yarn test --coverage
   - yarn build
   - "echo  \"Linting commit message(s). You can find the rules here: https://github.com/marionebl/commitlint/tree/master/@commitlint/config-angular#rules\""
   - ./node_modules/.bin/commitlint-travis
+after_success:
+  - codecov
