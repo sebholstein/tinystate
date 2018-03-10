@@ -6,7 +6,7 @@
 
 ---
 
-[![npm version](https://badge.fury.io/js/%40tinystate%2Fcore.svg)](https://www.npmjs.com/package/@tinystate/core) ![Supported Angular versions: 5+](https://img.shields.io/badge/Supported%20Angular%20versions-5+-green.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+[![Build Status](https://travis-ci.org/SebastianM/tinystate.svg?branch=master)](https://travis-ci.org/SebastianM/tinystate) [![npm version](https://badge.fury.io/js/%40tinystate%2Fcore.svg)](https://www.npmjs.com/package/@tinystate/core) ![Supported Angular versions: 5+](https://img.shields.io/badge/Supported%20Angular%20versions-5+-green.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
 
