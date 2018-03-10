@@ -54,6 +54,10 @@
     "moduleFileExtensions": [
       "js",
       "ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/public_api.ts"
     ]
   }
 }
