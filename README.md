@@ -257,7 +257,7 @@ TinyState hasn't the concept of Actions. So the action name will always be `NO_N
 
 Do you have a global state or a state that is needed in several components that you want to share between them and think that solutions like NGRX or Redux are a way too heavy for your simple use case? - then TinyState could be for you.
 
-TinyState is not a solution that should be seen as an alternative to NGRX or Redux because these projects trying to solve different problems than TinyState wants to solve.
+TinyState is not a solution that should be seen as an alternative to NGRX or Redux because these projects are trying to solve different problems than TinyState wants to solve.
 
 IMO local component state is totally fine as long as it works for you. So choose the right tool for the right job.
 
