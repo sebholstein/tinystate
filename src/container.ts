@@ -5,7 +5,7 @@ import { Subject } from 'rxjs/Subject';
 import { async } from 'rxjs/scheduler/async';
 import { Subscription } from 'rxjs/Subscription';
 import { RootContainer } from './root_container';
-import { Injectable, Optional, Inject } from '@angular/core';
+import { Injectable, Injector, Type, RootRenderer } from '@angular/core';
 
 let containerId = -1;
 
@@ -15,12 +15,10 @@ export abstract class Container<S extends object> {
   private _setStateSubscription: Subscription;
   private _state$ = new BehaviorSubject<S>(Object.assign({}, this.getInitialState()));
   private _defaultContainerInstanceId: string = `${this._getClassName()}@${++containerId}`;
+  private _rootContainer: RootContainer;
 
-  constructor(
-    @Optional()
-    @Inject(RootContainer)
-    private _rootContainer: RootContainer | null
-  ) {
+  constructor(injector: Injector) {
+    this._rootContainer = injector.get(RootContainer);
     if (this._rootContainer) {
       this._rootContainer.registerContainer(this);
     }
