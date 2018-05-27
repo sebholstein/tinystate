@@ -1,6 +1,6 @@
 {
   "name": "@tinystate/core",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A tiny state management library for Angular",
   "scripts": {
     "test": "jest",
@@ -38,8 +38,8 @@
     "zone.js": "^0.8.4"
   },
   "peerDependencies": {
-    "@angular/core": "^5.0.0",
-    "rxjs": "^5.5.6"
+    "@angular/core": "^6.0.0",
+    "rxjs": "^6.0.0"
   },
   "lint-staged": {
     "src/**/*.ts": [
