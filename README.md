@@ -103,22 +103,16 @@ export class MyComponent {
 
 The example shown above creates a `CounterContainer` instance for the `MyComponent` and is also injectable for all **child** components of the `MyComponent`.
 
-If you have global state that should be injectable in all your components, add the container(s) to the `providers` array of your root Module (which is usually called `AppModule`):
+If you have global state that should be injectable in all your components, add the `providedIn: 'root'` option to the `@Injectable` decorator of the Container:
 
 ```typescript
-@NgModule({
-  imports: [
-    CommonModule,
-    TinyStateModule.forRoot()
-  ],
-  providers: [
-    CounterContainer
-  ]
+@Injectable({
+  providedIn: 'root'
 })
-class AppModule {}
+class CounterContainer {}
 ```
 
-With the configuration show above, you can inject the `CounterContainer` container in every component of your application. If you don't know how the `providers` configuration work in Angular, you should [read the official documentation first](https://angular.io/guide/hierarchical-dependency-injection).
+With the configuration show above, you can inject the `CounterContainer` container in every component of your application.
 
 ## Testing containers
 
