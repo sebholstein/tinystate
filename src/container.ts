@@ -1,9 +1,5 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable, BehaviorSubject, Subject, asyncScheduler, Subscription } from 'rxjs';
 import { map, distinctUntilChanged, observeOn } from 'rxjs/operators';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Subject } from 'rxjs/Subject';
-import { async } from 'rxjs/scheduler/async';
-import { Subscription } from 'rxjs/Subscription';
 import { RootContainer } from './root_container';
 import { Injectable, Optional, Inject } from '@angular/core';
 
@@ -49,7 +45,7 @@ export abstract class Container<S extends object> {
     return this._state$.pipe(
       map(state => selectFn(state as Readonly<S>)),
       distinctUntilChanged(),
-      observeOn(async)
+      observeOn(asyncScheduler)
     );
   }
 
