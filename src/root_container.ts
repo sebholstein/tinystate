@@ -1,10 +1,8 @@
 import { Container } from './container';
 import { TinyStatePlugin, TINY_STATE_PLUGINS } from './plugin';
 import { Inject, SkipSelf, Optional, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Subscription, combineLatest, BehaviorSubject } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 export type ContainerInstanceMap = Map<string, Container<any>>;
 
